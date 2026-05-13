@@ -1,0 +1,617 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar - Placed above Home Page */
+.nav-bar {
+    position: relative;
+    z-index: 1000;
+    background: linear-gradient(180deg, #0b0b1f 0%, rgba(11,11,31,0.95) 100%);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border-bottom: 1px solid rgba(245, 218, 73, 0.3);
+    margin-bottom: 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #f5da49;
+    background: rgba(245, 218, 73, 0.1);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #f5da49;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Page with Navigation - Remove extra padding */
+.menu-page.has-nav {
+    padding-top: 0;
+}
+
+/* About Us Page */
+.about-page {
+    background: #0b0b1f69;
+    position: relative;
+    padding: 80px 70px 50px;
+    color: #fff;
+    height: auto;
+    min-height: 1600px;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text-block {
+    margin-bottom: 40px;
+}
+
+.about-description {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-principles {
+    background: rgba(245, 218, 73, 0.05);
+    border: 1px solid rgba(245, 218, 73, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.principles-title,
+.story-title,
+.principles-subtitle {
+    color: #f5da49;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.story-title {
+    font-size: 52px !important;
+    margin: 60px 0 30px !important;
+}
+
+.principles-subtitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.philosophy-text {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center !important;
+}
+
+.principles-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.principles-list li {
+    font-size: 18px;
+    padding: 8px 0 8px 20px;
+    position: relative;
+    color: #fff;
+}
+
+.principles-list li::before {
+    content: "✦";
+    color: #f5da49;
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+}
+
+.principles-note {
+    font-weight: 600;
+    color: #f5da49;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.belief-quote {
+    background: linear-gradient(135deg, rgba(245, 218, 73, 0.1), rgba(245, 218, 73, 0.05));
+    border-left: 4px solid #f5da49;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+}
+
+.belief-quote em {
+    color: #f5da49;
+    font-size: 22px;
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+
+.about-content {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    margin-top: 50px;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    color: #f5da49;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.about-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #fff;
+}
+
+.about-features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.about-feature {
+    text-align: center;
+    padding: 30px;
+    background: rgba(245, 218, 73, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(245, 218, 73, 0.3);
+    max-width: 250px;
+}
+
+.about-feature h3 {
+    color: #f5da49;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-feature p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* About Page Polish */
+.about-page {
+    padding: 78px 72px 86px;
+    min-height: 1600px;
+    --about-pillar-width: 1998px;
+    --about-pillar-height: 2590px;
+    --about-pillar-bottom: -16px;
+    --about-pillar-side: -1253px;
+    --about-pillar-opacity: 0.28;
+}
+
+.about-page .bottom-border {
+    opacity: 0.52;
+}
+
+.about-page .pillar {
+    width: var(--about-pillar-width);
+    height: var(--about-pillar-height);
+    bottom: var(--about-pillar-bottom);
+    opacity: var(--about-pillar-opacity);
+    filter: grayscale(1) brightness(1.16);
+}
+
+.about-page .pillar-left {
+    left: var(--about-pillar-side);
+}
+
+.about-page .pillar-right {
+    right: var(--about-pillar-side);
+}
+
+.about-content {
+    max-width: 1060px;
+    margin: 36px auto 0;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 76px;
+    line-height: 0.95;
+    margin-bottom: 34px;
+    letter-spacing: 2px;
+    text-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+}
+
+.about-text-block {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 34px;
+}
+
+.about-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    line-height: 1.85;
+    max-width: 860px;
+    margin: 0 auto 18px;
+    color: rgba(255, 255, 255, 0.92);
+    text-align: center;
+    font-weight: 525;
+    letter-spacing: 0.2px;
+}
+
+.about-principles {
+    position: relative;
+    overflow: hidden;
+    max-width: 780px;
+    margin: 42px auto;
+    padding: 34px 42px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(17, 18, 42, 0.88), rgba(8, 9, 24, 0.9));
+    border: 1px solid rgba(245, 218, 73, 0.28);
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.about-principles::before {
+    content: "";
+    position: absolute;
+    left: 42px;
+    right: 42px;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f5da49, transparent);
+    opacity: 0.78;
+}
+
+.principles-title,
+.story-title,
+.principles-subtitle {
+    font-family: 'Playfair Display', serif;
+    color: #f7df63;
+    text-align: center;
+    letter-spacing: 1.6px;
+}
+
+.principles-title {
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+.story-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: 42px !important;
+    margin: 64px 0 28px !important;
+    text-transform: uppercase;
+}
+
+.story-title::before,
+.story-title::after {
+    content: "";
+    width: 110px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245, 218, 73, 0.86));
+}
+
+.story-title::after {
+    background: linear-gradient(90deg, rgba(245, 218, 73, 0.86), transparent);
+}
+
+.principles-subtitle {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.philosophy-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff7bf;
+    margin-bottom: 22px;
+}
+
+.principles-list {
+    display: grid;
+    gap: 13px;
+    margin: 0 auto 22px;
+}
+
+.principles-list li {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    line-height: 1.58;
+    padding: 0 0 0 28px;
+    color: rgba(255, 255, 255, 0.92);
+    letter-spacing: 0.2px;
+}
+
+.principles-list li::before {
+    content: "";
+    left: 2px;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f5da49;
+    box-shadow: 0 0 14px rgba(245, 218, 73, 0.55);
+}
+
+.principles-note {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #f7df63;
+    letter-spacing: 1px;
+    margin-top: 18px;
+}
+
+.belief-quote {
+    max-width: 850px;
+    margin: 44px auto 58px;
+    padding: 34px 48px;
+    border: 1px solid rgba(245, 218, 73, 0.3);
+    border-radius: 8px;
+    background: rgba(245, 218, 73, 0.08);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    line-height: 1.75;
+}
+
+.belief-quote em {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    line-height: 1.45;
+    color: #f7df63;
+    margin-top: 12px;
+}
+
+/* Contact Page */
+.contact-page {
+    background: #0b0b1f69;
+    position: relative;
+    padding: 80px 70px 50px;
+    color: #fff;
+    height: auto;
+    min-height: 1260px;
+    --contact-pillar-width: 1059px;
+    --contact-pillar-height: 1387px;
+    --contact-pillar-bottom: -2px;
+    --contact-pillar-side: -629px;
+    --contact-pillar-opacity: 0.3;
+}
+
+/* Contact Page Pillars
+   Adjust the variables in .contact-page above to move/resize the single pillar on each side. */
+.contact-page::before,
+.contact-page::after {
+    content: none;
+}
+
+.contact-page .pillar {
+    width: var(--contact-pillar-width);
+    height: var(--contact-pillar-height);
+    bottom: var(--contact-pillar-bottom);
+    opacity: var(--contact-pillar-opacity);
+}
+
+.contact-page .pillar-left {
+    left: var(--contact-pillar-side);
+}
+
+.contact-page .pillar-right {
+    right: var(--contact-pillar-side);
+}
+
+.contact-content {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    margin-top: 50px;
+}
+
+.contact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    color: #f5da49;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 30px;
+    background: rgba(245, 218, 73, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(245, 218, 73, 0.3);
+    min-width: 280px;
+}
+
+.contact-item h3 {
+    color: #f5da49;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-item p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: #f5da49;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 10px 20px;
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+.about-title, .contact-title {
+        font-size: 42px;
+    }
+
+    .about-page {
+        padding: 34px 18px 60px;
+        --about-pillar-width: 220px;
+        --about-pillar-height: 360px;
+        --about-pillar-bottom: -12px;
+        --about-pillar-side: -92px;
+        --about-pillar-opacity: 0.14;
+    }
+
+    .about-content {
+        margin-top: 18px;
+    }
+
+    .about-title {
+        line-height: 1.05;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .about-description {
+        font-size: 18px;
+        line-height: 1.75;
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-text-block {
+        margin-bottom: 24px;
+    }
+
+    .about-principles {
+        width: 100%;
+        padding: 28px 22px;
+        margin: 28px auto;
+    }
+
+    .about-principles::before {
+        left: 22px;
+        right: 22px;
+    }
+
+    .principles-title {
+        font-size: 23px;
+    }
+
+    .story-title {
+        gap: 12px;
+        font-size: 28px !important;
+        margin: 42px 0 22px !important;
+    }
+
+    .story-title::before,
+    .story-title::after {
+        width: 44px;
+    }
+
+    .principles-subtitle {
+        font-size: 21px;
+    }
+
+    .principles-list li {
+        font-size: 15px;
+    }
+
+    .belief-quote {
+        padding: 28px 22px;
+        margin: 34px auto 44px;
+        font-size: 16px;
+    }
+
+    .belief-quote em {
+        font-size: 21px;
+    }
+    
+    .about-features, .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-feature, .contact-item {
+        width: 90%;
+        max-width: none;
+    }
+
+    /* Contact page pillars - mobile */
+    .contact-page {
+        --contact-pillar-width: 200px;
+        --contact-pillar-height: 200px;
+        --contact-pillar-bottom: -10px;
+        --contact-pillar-side: -80px;
+        --contact-pillar-opacity: 0.15;
+    }
+}
